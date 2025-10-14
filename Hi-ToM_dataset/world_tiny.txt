@@ -1,0 +1,87 @@
+# locations
+
+create office
+set office is_thing
+set office is_location
+
+create workshop
+set workshop is_thing
+set workshop is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create back_yard
+set back_yard is_thing
+set back_yard is_location
+
+create basement
+set basement is_thing
+set basement is_location
+
+# objects
+
+create radish
+set radish is_thing
+set radish is_gettable
+
+create potato
+set potato is_thing
+set potato is_gettable
+
+create green_pepper
+set green_pepper is_thing
+set green_pepper is_gettable
+
+create apple
+set apple is_thing
+set apple is_gettable
+
+create melon
+set melon is_thing
+set melon is_gettable
+
+# containers
+
+create blue_container
+set blue_container is_thing
+set blue_container is_container
+
+create red_cupboard
+set red_cupboard is_thing
+set red_cupboard is_container
+
+create blue_suitcase
+set blue_suitcase is_thing
+set blue_suitcase is_container
+
+create red_crate
+set red_crate is_thing
+set red_crate is_container
+
+create red_suitcase
+set red_suitcase is_thing
+set red_suitcase is_container
+
+# actors
+
+create Owen
+set Owen is_actor
+set Owen is_god
+
+create Elizabeth
+set Elizabeth is_actor
+set Elizabeth is_god
+
+create James
+set James is_actor
+set James is_god
+
+create Jayden
+set Jayden is_actor
+set Jayden is_god
+
+create Hannah
+set Hannah is_actor
+set Hannah is_god

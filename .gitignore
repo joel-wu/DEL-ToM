@@ -1,0 +1,5 @@
+data/
+*/data/
+last_run_prepared/
+**/last_run_prepared/
+*.nfs*
