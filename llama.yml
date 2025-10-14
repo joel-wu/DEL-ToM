@@ -1,0 +1,60 @@
+# === Model ===
+base_model: meta-llama/Llama-3.2-1B-Instruct
+tokenizer_type: AutoTokenizer
+load_in_8bit: false
+load_in_4bit: false
+strict: false
+trust_remote_code: true
+
+# === Data / Template ===
+datasets:
+  - path: joooelw/ToM-PBM-Train
+    type: chat_template
+    chat_template: chatml
+    field_messages: conversations
+    message_property_mappings:
+      role: role
+      content: content
+    roles_to_train: ["assistant"]   
+    train_on_eos: "turn"
+    split: train
+    train_on_inputs: false
+
+special_tokens:
+  eos_token: "<|im_end|>"
+  pad_token: "<|end_of_text|>"
+
+dataset_processes: 48
+dataset_prepared_path: ~/data/preference-models/last_run_prepared
+
+# === Training ===
+output_dir: ./prm-ToM-1B
+num_epochs: 1
+micro_batch_size: 1
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-6
+optimizer: paged_adamw_32bit
+lr_scheduler: cosine
+weight_decay: 0.0
+max_grad_norm: 1.0
+val_set_size: 0.0
+group_by_length: false
+
+# === Sequence / Packing ===
+sequence_len: 8192
+sample_packing: true
+pad_to_sequence_len: true
+
+# === Precision / Perf ===
+bf16: true
+fp16: false
+tf32: true
+flash_attention: true
+gradient_checkpointing: true
+
+# === Logging / Checkpoint ===
+logging_steps: 2
+save_steps: 100
+save_strategy: steps
+save_total_limit: 4
+save_safetensors: true
