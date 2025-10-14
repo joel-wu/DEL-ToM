@@ -1,4 +1,10 @@
-# [EMNLP’25] DEL-ToM: Inference-Time Scaling for Theory-of-Mind Reasoning via Dynamic Epistemic Logic
+# [EMNLP'25] DEL-ToM: Inference-Time Scaling for Theory-of-Mind Reasoning via Dynamic Epistemic Logic
+
+[![EMNLP 2025](https://img.shields.io/badge/EMNLP-2025-blue)](https://2025.emnlp.org/)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.17348-red)](https://arxiv.org/abs/2505.17348)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)
+[![Models](https://img.shields.io/badge/Hugging%20Face-Models-yellow)](https://huggingface.co/joooelw)
+[![Datasets](https://img.shields.io/badge/Hugging%20Face-Datasets-yellow)](https://huggingface.co/joooelw)
 
 This repository contains the implementation of **DEL-ToM**, designed to run on **NVIDIA H100** GPUs.  
 It provides step-by-step instructions for **(1)** environment setup and **(2)** fine-tuning the **Process Belief Model (PBM)** using **Axolotl** on a curated ToM dataset.  
